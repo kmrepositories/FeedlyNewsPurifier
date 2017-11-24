@@ -1,0 +1,25 @@
+{
+  "name": "Feedly News Purifier",
+  "description": "Neural network based approach to automatically discard not important news.",
+  "version": "0.1",
+  "manifest_version": 2,
+  
+  "page_action": {
+	"default_icon": "icon.png"
+  },
+  
+  "background": {
+	"scripts": ["backgroundscript.js"]
+	},
+	
+	"permissions": ["<all_urls>"],
+	
+"content_scripts": [
+    {
+      "matches": ["https://feedly.com/*"],
+      "js": ["contentscript.js"]
+    }
+  ],
+  
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

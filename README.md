@@ -1,6 +1,6 @@
 # FeedlyNewsPurifier
 
-Artificial neural network based approach to automatically discard not important news in Feedly RSS client.
+kfdskfgArtificial neural network based approach to automatically discard not important news in Feedly RSS client.
 
 The premise of this project is to create an automated tool that can help user in a process of discarding not important news from Feedly RSS client. The code accomplishes this with the aid of artificial neural network.
 

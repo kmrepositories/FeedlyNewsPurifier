@@ -153,9 +153,13 @@ function predictAndMarkImportance() {
         var percent = entry.querySelectorAll('.percent');
 
         if (percent.length == 0) {
-            var prediction = predict(entry);
+            var waiting = entry.classList.contains('waiting')
+            
+            if(waiting == false) {
+                entry.classList.add('waiting')
 
-            // markPrediction(entry, prediction);	
+                var prediction = predict(entry);
+            }
         }
     }
 }
@@ -178,6 +182,8 @@ function markPrediction(entry, prediction) {
     var visual = getVisualElement(entry);
 
     visual.appendChild(span);
+
+    entry.classList.remove('waiting')
 }
 
 function getVisualElement(entry) {

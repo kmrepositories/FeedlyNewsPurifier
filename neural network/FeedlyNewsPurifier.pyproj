@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>8a923d15-98c6-47a5-86a2-7bb116fdd0b6</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>neuralNetwork.py</StartupFile>
+    <StartupFile>nn.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -28,14 +28,42 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="encoder.py" />
-    <Compile Include="fileDownloader.py">
+    <Compile Include="hualos\api.py" />
+    <Compile Include="InputPreparer.py" />
+    <Compile Include="MyCallback.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="KerasJSModelInputPreparer.py">
+    <Compile Include="ModelPackageCreator.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="neuralNetwork.py" />
+    <Compile Include="nn.py" />
+    <Compile Include="Common.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataGatherer.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NeuralNetwork.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="hualos\" />
+    <Folder Include="hualos\static\" />
+    <Folder Include="hualos\static\css\" />
+    <Folder Include="hualos\static\js\" />
+    <Folder Include="hualos\templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="hualos\.gitignore" />
+    <Content Include="hualos\LICENSE" />
+    <Content Include="hualos\README.md" />
+    <Content Include="hualos\static\css\bootstrap.min.css" />
+    <Content Include="hualos\static\css\c3.min.css" />
+    <Content Include="hualos\static\js\c3.min.js" />
+    <Content Include="hualos\static\js\d3.min.js" />
+    <Content Include="hualos\static\js\jquery.min.js" />
+    <Content Include="hualos\templates\test.html" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
